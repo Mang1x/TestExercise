@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="cashMachineSimulator">
+    <head>
+        <meta charset="UTF-8">
+        <title>ATM Simulator</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+        <script src="btnController.js"></script>
+    </head>
+    <body>
+        <div ng-controller="btnCtrl">
+            <form novalidate>
+                Input: <input type="text" ng-model="withdrawSum" ><br>
+                <button ng-click="withdraw()" ng-disabled=withdrawDisabled>Withdraw</button>
+                <button ng-click="reset()" ng-disabled=resetDisabled>Reset</button><br>
+                {{result}}
+            </form>
+        </div>
+    </body>
+</html>
